@@ -2,6 +2,8 @@
 <a href="{{ route('admin.item.index') }}">商品一覧</a>
 
 <form action="{{ route('admin.item.add') }}" method="post">
+  @csrf
+
   <label for="">商品名</label>
   <input type="text" name="name">
   <button>更新</button>
