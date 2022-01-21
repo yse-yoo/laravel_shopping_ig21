@@ -34,6 +34,6 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/admin/item/', [ItemController::class, 'index']);
-Route::get('/admin/item/create', [ItemController::class, 'create']);
-Route::post('/admin/item/add', [ItemController::class, 'add']);
+Route::get('/admin/item/', [ItemController::class, 'index'])->name('admin.item.index');
+Route::get('/admin/item/create', [ItemController::class, 'create'])->name('admin.item.create');
+Route::post('/admin/item/add', [ItemController::class, 'add'])->name('admin.item.add');
