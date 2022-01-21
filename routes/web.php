@@ -35,3 +35,5 @@ Route::get('/about', function() {
 });
 
 Route::get('/admin/item/', [ItemController::class, 'index']);
+Route::get('/admin/item/create', [ItemController::class, 'create']);
+Route::post('/admin/item/add', [ItemController::class, 'add']);

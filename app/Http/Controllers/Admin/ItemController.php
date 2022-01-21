@@ -12,4 +12,17 @@ class ItemController extends Controller
     {
         return view('admin.item.index');
     }
+
+    //商品入力
+    public function create()
+    {
+        return view('admin.item.create');
+    }
+
+    //商品追加  
+    public function add()
+    {
+        //商品一覧にリダイレクト
+        return redirect('/admin/item/');
+    }
 }
