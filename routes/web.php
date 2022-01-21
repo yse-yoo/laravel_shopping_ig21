@@ -30,5 +30,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/about', function() {
-    return 'このページはAboutページです';
+    return view('about');
 });
