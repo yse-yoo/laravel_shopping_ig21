@@ -21,7 +21,7 @@ class CreateItemsTable extends Migration
             $table->string('code', 100)->unique();
             $table->integer('price');
             $table->integer('stock')->default(0);
-            $table->string('picture', 255);
+            $table->string('picture', 255)->nullable();
         });
     }
 
