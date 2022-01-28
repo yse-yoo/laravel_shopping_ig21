@@ -42,4 +42,13 @@ class ItemController extends Controller
         return view('admin.item.edit', $data);
     }
 
+    public function update(Request $request, $id)
+    {
+        $posts = $request->all();
+        //UPDATE items SET name = 'xxxx', code = 'xxxx' ... WHERE id = xxx;
+        Item::find($id)->update($posts);
+        return redirect()->route('admin.item.index');
+    }
+
+
 }

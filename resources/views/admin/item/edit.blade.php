@@ -1,7 +1,7 @@
-<h2>{{ __('Item Input') }}</h2>
+<h2>{{ __('Item Edit') }}</h2>
 <a href="{{ route('admin.item.index') }}">{{ __('Back') }}</a>
 
-<form action="{{ route('admin.item.add') }}" method="post">
+<form action="{{ route('admin.item.update', $item->id) }}" method="post">
   @csrf
 
   <div>
