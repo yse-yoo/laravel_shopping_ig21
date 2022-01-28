@@ -36,8 +36,10 @@ class ItemController extends Controller
 
     public function edit(Request $request, $id)
     {
-        dd($id);
-        return view('admin.item.create');
+        //SELECT * FROM items WHERE id = xxx;
+        $item = Item::find($id);
+        $data = ['item' => $item];
+        return view('admin.item.edit', $data);
     }
 
 }
