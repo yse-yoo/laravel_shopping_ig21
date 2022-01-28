@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h2>商品一覧</h2>
-<a class="btn btn-primary" href="{{ route('admin.item.create') }}">商品追加</a>
+<h2 class="h2">{{ __('Item List') }}</h2>
+<a class="btn btn-primary" href="{{ route('admin.item.create') }}">{{ __('New Item') }}</a>
 
 <table class="table">
   <tr>
