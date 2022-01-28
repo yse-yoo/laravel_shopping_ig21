@@ -33,4 +33,11 @@ class ItemController extends Controller
         //商品一覧にリダイレクト
         return redirect('/admin/item/');
     }
+
+    public function edit(Request $request, $id)
+    {
+        dd($id);
+        return view('admin.item.create');
+    }
+
 }
