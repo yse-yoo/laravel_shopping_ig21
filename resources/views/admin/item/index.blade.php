@@ -1,7 +1,10 @@
-<h2>商品一覧</h2>
-<a href="{{ route('admin.item.create') }}">商品追加</a>
+@extends('layouts.app')
 
-<table>
+@section('content')
+<h2>商品一覧</h2>
+<a class="btn btn-primary" href="{{ route('admin.item.create') }}">商品追加</a>
+
+<table class="table">
   <tr>
     <th></th>
     <th>{{__('label.item_name')}}</th>
@@ -13,7 +16,7 @@
   @if($items)
   @foreach($items as $item)
   <tr>
-    <td><a href="{{ route('admin.item.edit', $item->id) }}">{{__('Edit')}}</a></td>
+    <td><a class="btn btn-outline-primary" href="{{ route('admin.item.edit', $item->id) }}">{{__('Edit')}}</a></td>
     <td>{{ $item->name }}</td>
     <td>{{ $item->code }}</td>
     <td>{{ $item->price }}</td>
@@ -22,3 +25,4 @@
   @endforeach
   @endif
 </table>
+@endsection
