@@ -11,7 +11,10 @@ class ItemController extends Controller
     //商品一覧ページ
     public function index()
     {
-        return view('admin.item.index');
+        //SELECT * FROM items;
+        $items = Item::get();
+        $data = ['items' => $items];
+        return view('admin.item.index', $data);
     }
 
     //商品入力
@@ -25,7 +28,7 @@ class ItemController extends Controller
     {
         $posts = $request->all();
         // dd($posts);
-        //INSERT
+        //INSERT INTO items SET name = 'XXXX', code ='XXXX', ...;
         Item::create($posts);
         //商品一覧にリダイレクト
         return redirect('/admin/item/');
