@@ -5,15 +5,15 @@
   @csrf
 
   <div>
-    <label for="">{{ __('Item Name') }}</label>
+    <label for="">{{ __('label.item_name') }}</label>
     <input type="text" name="name">
   </div>
   <div>
-    <label for="">{{ __('Item Code') }}</label>
+    <label for="">{{ __('label.item_code') }}</label>
     <input type="text" name="code">
   </div>
   <div>
-    <label for="">{{ __('Price') }}</label>
+    <label for="">{{ __('label.price') }}</label>
     <input type="number" name="price">
   </div>
 
