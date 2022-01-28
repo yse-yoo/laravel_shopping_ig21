@@ -6,19 +6,19 @@
 
   <div>
     <label for="">{{ __('label.item_name') }}</label>
-    <input type="text" name="name">
+    <input type="text" name="name" value="{{ $item->name }}">
   </div>
   <div>
     <label for="">{{ __('label.item_code') }}</label>
-    <input type="text" name="code">
+    <input type="text" name="code" value="{{ $item->code }}">
   </div>
   <div>
     <label for="">{{ __('label.price') }}</label>
-    <input type="number" name="price">
+    <input type="number" name="price" value="{{ $item->price }}">
   </div>
   <div>
     <label for="">{{ __('label.stock') }}</label>
-    <input type="number" name="stock">
+    <input type="number" name="stock" value="{{ $item->stock }}">
   </div>
 
   <button>{{ __('Update') }}</button>
