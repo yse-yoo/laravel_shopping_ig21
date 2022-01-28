@@ -4,18 +4,20 @@
 <table>
   <tr>
     <th></th>
-    <th>{{__('Item Name')}}</th>
-    <th>{{__('Item Code')}}</th>
-    <th>{{__('Price')}}</th>
+    <th>{{__('label.item_name')}}</th>
+    <th>{{__('label.item_code')}}</th>
+    <th>{{__('label.price')}}</th>
+    <th>{{__('label.stock')}}</th>
   </tr>
 
   @if($items)
   @foreach($items as $item)
   <tr>
-    <td></td>
+    <td><a href="{{ route('admin.item.edit', $item->id) }}">{{__('Edit')}}</a></td>
     <td>{{ $item->name }}</td>
     <td>{{ $item->code }}</td>
     <td>{{ $item->price }}</td>
+    <td>{{ $item->stock }}</td>
   </tr>
   @endforeach
   @endif
